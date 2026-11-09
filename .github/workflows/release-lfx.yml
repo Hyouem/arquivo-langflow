@@ -51,7 +51,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Environment
-        uses: astral-sh/setup-uv@v10.0.0
+        uses: astral-sh/setup-uv@v10.3.3
         with:
           version: latest-known
           enable-cache: true
@@ -115,7 +115,7 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Setup Environment
-        uses: astral-sh/setup-uv@v10.0.0
+        uses: astral-sh/setup-uv@v10.3.3
         with:
           version: ${{ matrix.python-version == '3.15' && '0.13.0' || 'latest-known' }}
           enable-cache: true
@@ -153,7 +153,7 @@ jobs:
           ref: ${{ needs.validate-version.outputs.release_ref }}
 
       - name: Setup Environment
-        uses: astral-sh/setup-uv@v10.0.0
+        uses: astral-sh/setup-uv@v10.3.3
         with:
           version: latest-known
           enable-cache: true
